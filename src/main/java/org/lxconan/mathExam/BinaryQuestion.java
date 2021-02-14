@@ -33,6 +33,7 @@ public class BinaryQuestion implements Question {
         return toString(false);
     }
 
+    @Override
     public String toString(boolean includeAnswer) {
         return String.format("%d %s %d = ", operandLeft, operatorSymbol, operandRight) +
             (includeAnswer ? calculation.apply(operandLeft, operandRight) : "");

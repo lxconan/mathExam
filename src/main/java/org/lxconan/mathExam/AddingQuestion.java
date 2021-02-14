@@ -5,3 +5,4 @@ public class AddingQuestion extends BinaryQuestion {
         super(operandLeft, operandRight, estimation, Integer::sum, "+");
     }
 }
+

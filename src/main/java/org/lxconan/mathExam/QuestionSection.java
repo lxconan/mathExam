@@ -27,4 +27,30 @@ public class QuestionSection {
     }
 
     public int size () { return questions.length; }
+
+    @Override
+    public String toString() {
+        return toString(false);
+    }
+
+    public String toString(boolean includeAnswer) {
+        final String estimationString = getEstimationString();
+        var stringBuilder = new StringBuilder(getTitle())
+            .append("    ").append(estimationString).append("\n");
+        for (Question question : getQuestions()) {
+            stringBuilder.append(question.toString(includeAnswer)).append("\n");
+        }
+
+        stringBuilder.append("\n");
+        return stringBuilder.toString();
+    }
+
+    private String getEstimationString() {
+        final var estimation = getEstimation();
+        final var minimumMinutes = estimation.getMinimumMinutes();
+        final var maximumMinutes = estimation.getMaximumMinutes();
+        return "(" +
+            minimumMinutes + " ~ " + maximumMinutes + " minutes" +
+            ")";
+    }
 }

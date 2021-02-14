@@ -14,7 +14,7 @@ public class SubtractingQuestionResultRestrictedFactory implements QuestionFacto
         int o1, o2;
 
         o1 = RandomNumberGenerator.createNumber(maximumOperand / 3, maximumOperand);
-        o2 = RandomNumberGenerator.createNumber(0, maximumOperand - o1);
+        o2 = RandomNumberGenerator.createNumber(0, o1);
 
         return new SubtractingQuestion(o1, o2, estimation);
     }

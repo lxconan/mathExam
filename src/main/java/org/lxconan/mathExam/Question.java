@@ -3,6 +3,7 @@ package org.lxconan.mathExam;
 public interface Question {
     @Override
     String toString();
+    String toString(boolean includeAnswer);
 
     Estimation getEstimation();
 
