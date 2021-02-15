@@ -1,4 +1,10 @@
-package org.lxconan.mathExam;
+package org.lxconan.mathExam.questionFactory.subtract;
+
+import org.lxconan.mathExam.Estimation;
+import org.lxconan.mathExam.RandomNumberGenerator;
+import org.lxconan.mathExam.question.Question;
+import org.lxconan.mathExam.question.SubtractingQuestion;
+import org.lxconan.mathExam.questionFactory.QuestionFactory;
 
 public class SubtractingQuestionResultRestrictedFactory implements QuestionFactory {
     private final int maximumOperand;

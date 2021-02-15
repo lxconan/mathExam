@@ -1,4 +1,10 @@
-package org.lxconan.mathExam;
+package org.lxconan.mathExam.questionFactory.add;
+
+import org.lxconan.mathExam.Estimation;
+import org.lxconan.mathExam.RandomNumberGenerator;
+import org.lxconan.mathExam.question.AddingQuestion;
+import org.lxconan.mathExam.question.Question;
+import org.lxconan.mathExam.questionFactory.QuestionFactory;
 
 public class AddingQuestionResultRestrictedFactory implements QuestionFactory {
     private final int maximumResult;

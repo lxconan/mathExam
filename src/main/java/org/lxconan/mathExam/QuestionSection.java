@@ -1,5 +1,7 @@
 package org.lxconan.mathExam;
 
+import org.lxconan.mathExam.question.Question;
+
 import java.util.Arrays;
 
 public class QuestionSection {

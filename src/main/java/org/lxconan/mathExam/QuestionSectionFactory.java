@@ -1,17 +1,26 @@
 package org.lxconan.mathExam;
 
+import org.lxconan.mathExam.question.Question;
+import org.lxconan.mathExam.questionFactory.QuestionFactory;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class QuestionSectionFactory {
+    private final int numbers;
     private final QuestionFactory[] questionFactories;
 
-    public QuestionSectionFactory(QuestionFactory... questionFactories) {
+    public QuestionSectionFactory(int numbers, QuestionFactory... questionFactories) {
         this.questionFactories = questionFactories;
+        this.numbers = numbers;
+    }
+
+    public QuestionSectionFactory(QuestionFactory... questionFactories) {
+        this(20, questionFactories);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
-    public QuestionSection create(String title, int numbers) {
+    public QuestionSection create(String title) {
         Set<Question> questions = new HashSet<>();
 
         for (int i = 0; i < numbers; ++i) {

@@ -13,7 +13,7 @@ public class Exam {
     @Override
     public String toString() {
         final QuestionSection[] questionSections = Arrays.stream(factories)
-            .map(f -> f.create("Please calculate", 20))
+            .map(f -> f.create("Please calculate"))
             .toArray(QuestionSection[]::new);
         return Arrays.stream(questionSections)
             .map(QuestionSection::toString)

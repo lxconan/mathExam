@@ -1,4 +1,6 @@
-package org.lxconan.mathExam;
+package org.lxconan.mathExam.question;
+
+import org.lxconan.mathExam.Estimation;
 
 public interface Question {
     @Override
