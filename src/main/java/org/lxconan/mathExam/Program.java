@@ -1,5 +1,7 @@
 package org.lxconan.mathExam;
 
+import org.lxconan.mathExam.questionFactory.divide.TableDivideQuestionFactory;
+import org.lxconan.mathExam.questionFactory.divide.TableDivideWithRemainderQuestionFactory;
 import org.lxconan.mathExam.questionFactory.multiply.TableMultiplyFactory;
 import org.lxconan.mathExam.questionFactory.multiply.TableMultiplyWithZerosFactory;
 import org.lxconan.mathExam.questionFactory.multiply.ThreeOneMultiplyQuestionFactory;
@@ -7,17 +9,17 @@ import org.lxconan.mathExam.questionFactory.multiply.TwoOneMultiplyQuestionFacto
 
 public class Program {
     public static void main(String[] args) {
-        final Exam exam = createMultiplyExam();
+        final Exam exam = createExam();
 
         System.out.println(exam.toString());
     }
 
-    private static Exam createMultiplyExam() {
+    private static Exam createExam() {
         return new Exam(
-            new QuestionSectionFactory(25, new TableMultiplyFactory()),
             new QuestionSectionFactory(20, new TableMultiplyWithZerosFactory()),
             new QuestionSectionFactory(20, new TwoOneMultiplyQuestionFactory()),
-            new QuestionSectionFactory(8, new ThreeOneMultiplyQuestionFactory())
+            new QuestionSectionFactory(25, new TableDivideQuestionFactory()),
+            new QuestionSectionFactory(20, new TableDivideWithRemainderQuestionFactory())
         );
     }
 }
